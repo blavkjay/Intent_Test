@@ -21,6 +21,9 @@
 		843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384112710E7CB0086DB06 /* RepoSearchListService.swift */; };
 		843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384132710EF160086DB06 /* RemoteRepoListResponse.swift */; };
 		843384182710F4FA0086DB06 /* RepoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */; };
+		8433841B2710F5FC0086DB06 /* RepoSearchComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841A2710F5FC0086DB06 /* RepoSearchComposer.swift */; };
+		8433841E2710F64F0086DB06 /* RepoSearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */; };
+		843384202710F65B0086DB06 /* RepoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		843384112710E7CB0086DB06 /* RepoSearchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchListService.swift; sourceTree = "<group>"; };
 		843384132710EF160086DB06 /* RemoteRepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepoListResponse.swift; sourceTree = "<group>"; };
 		843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewModel.swift; sourceTree = "<group>"; };
+		8433841A2710F5FC0086DB06 /* RepoSearchComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchComposer.swift; sourceTree = "<group>"; };
+		8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchLayout.swift; sourceTree = "<group>"; };
+		8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,8 @@
 		843384152710F4C60086DB06 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8433841C2710F6390086DB06 /* ui */,
+				843384192710F5E70086DB06 /* composer */,
 				843384162710F4D30086DB06 /* viewModel */,
 			);
 			path = presentation;
@@ -192,6 +200,23 @@
 				843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		843384192710F5E70086DB06 /* composer */ = {
+			isa = PBXGroup;
+			children = (
+				8433841A2710F5FC0086DB06 /* RepoSearchComposer.swift */,
+			);
+			path = composer;
+			sourceTree = "<group>";
+		};
+		8433841C2710F6390086DB06 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */,
+				8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,14 +350,17 @@
 			files = (
 				8433840D2710E67D0086DB06 /* RepoSearchLoader.swift in Sources */,
 				843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */,
+				8433841B2710F5FC0086DB06 /* RepoSearchComposer.swift in Sources */,
 				843383DA2710E3040086DB06 /* ViewController.swift in Sources */,
 				8433840A2710E4F50086DB06 /* URLSessionHttpClient.swift in Sources */,
+				843384202710F65B0086DB06 /* RepoSearchViewController.swift in Sources */,
 				843383D62710E3040086DB06 /* AppDelegate.swift in Sources */,
 				8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */,
 				843383D82710E3040086DB06 /* SceneDelegate.swift in Sources */,
 				843384082710E4D20086DB06 /* ApiClient.swift in Sources */,
 				843384182710F4FA0086DB06 /* RepoSearchViewModel.swift in Sources */,
 				843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */,
+				8433841E2710F64F0086DB06 /* RepoSearchLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
