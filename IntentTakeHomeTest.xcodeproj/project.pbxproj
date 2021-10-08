@@ -20,6 +20,7 @@
 		8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433840E2710E76D0086DB06 /* RepoListResponse.swift */; };
 		843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384112710E7CB0086DB06 /* RepoSearchListService.swift */; };
 		843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384132710EF160086DB06 /* RemoteRepoListResponse.swift */; };
+		843384182710F4FA0086DB06 /* RepoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8433840E2710E76D0086DB06 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
 		843384112710E7CB0086DB06 /* RepoSearchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchListService.swift; sourceTree = "<group>"; };
 		843384132710EF160086DB06 /* RemoteRepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepoListResponse.swift; sourceTree = "<group>"; };
+		843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		843384052710E4A10086DB06 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				843384152710F4C60086DB06 /* presentation */,
 				843384102710E7A60086DB06 /* api */,
 				8433840B2710E53D0086DB06 /* feature */,
 			);
@@ -173,6 +176,22 @@
 				843384132710EF160086DB06 /* RemoteRepoListResponse.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		843384152710F4C60086DB06 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				843384162710F4D30086DB06 /* viewModel */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		843384162710F4D30086DB06 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				843384172710F4FA0086DB06 /* RepoSearchViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +331,7 @@
 				8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */,
 				843383D82710E3040086DB06 /* SceneDelegate.swift in Sources */,
 				843384082710E4D20086DB06 /* ApiClient.swift in Sources */,
+				843384182710F4FA0086DB06 /* RepoSearchViewModel.swift in Sources */,
 				843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
