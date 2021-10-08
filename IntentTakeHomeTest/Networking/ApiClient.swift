@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ApiClient {
-    func perform(urlRequest: URLRequest, completion: @escaping (Result<Data?, Error>) -> Void)
+    func get(url: String, params: [String:Any] ,completion: @escaping (Result<Data?, Error>) -> Void) 
 }

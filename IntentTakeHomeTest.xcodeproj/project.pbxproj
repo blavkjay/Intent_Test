@@ -18,6 +18,7 @@
 		8433840A2710E4F50086DB06 /* URLSessionHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384092710E4F50086DB06 /* URLSessionHttpClient.swift */; };
 		8433840D2710E67D0086DB06 /* RepoSearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433840C2710E67D0086DB06 /* RepoSearchLoader.swift */; };
 		8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433840E2710E76D0086DB06 /* RepoListResponse.swift */; };
+		843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384112710E7CB0086DB06 /* RepoSearchListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		843384092710E4F50086DB06 /* URLSessionHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHttpClient.swift; sourceTree = "<group>"; };
 		8433840C2710E67D0086DB06 /* RepoSearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchLoader.swift; sourceTree = "<group>"; };
 		8433840E2710E76D0086DB06 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
+		843384112710E7CB0086DB06 /* RepoSearchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchListService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		843384052710E4A10086DB06 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				843384102710E7A60086DB06 /* api */,
 				8433840B2710E53D0086DB06 /* feature */,
 			);
 			path = Search;
@@ -159,6 +162,14 @@
 				8433840E2710E76D0086DB06 /* RepoListResponse.swift */,
 			);
 			path = feature;
+			sourceTree = "<group>";
+		};
+		843384102710E7A60086DB06 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				843384112710E7CB0086DB06 /* RepoSearchListService.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 				8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */,
 				843383D82710E3040086DB06 /* SceneDelegate.swift in Sources */,
 				843384082710E4D20086DB06 /* ApiClient.swift in Sources */,
+				843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

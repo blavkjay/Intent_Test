@@ -9,9 +9,28 @@ import Foundation
 
 
 final class URLSessionHttpClient: ApiClient {
+
+    
     let session = URLSession.shared
     
-    func perform(urlRequest: URLRequest, completion: @escaping (Result<Data?, Error>) -> Void) {
+    func get(url: String, params: [String:Any] ,completion: @escaping (Result<Data?, Error>) -> Void) {
+        
+        guard var urlComponents = URLComponents(string: url) else {
+            return
+        }
+        
+        //add params to the url
+        urlComponents.queryItems = params.map { (arg) -> URLQueryItem in
+            let (key, value) = arg
+            return URLQueryItem(name: key, value: "\(value)")
+        }
+        urlComponents.percentEncodedQuery = urlComponents.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
+        guard let url = urlComponents.url else {
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         session.dataTask(with: urlRequest) { data, response, error in
             if let error = error {
                 completion(.failure(error))
@@ -19,4 +38,5 @@ final class URLSessionHttpClient: ApiClient {
             completion(.success(data))
         }.resume()
     }
+    
 }
