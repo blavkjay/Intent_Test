@@ -19,6 +19,7 @@
 		8433840D2710E67D0086DB06 /* RepoSearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433840C2710E67D0086DB06 /* RepoSearchLoader.swift */; };
 		8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433840E2710E76D0086DB06 /* RepoListResponse.swift */; };
 		843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384112710E7CB0086DB06 /* RepoSearchListService.swift */; };
+		843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384132710EF160086DB06 /* RemoteRepoListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8433840C2710E67D0086DB06 /* RepoSearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchLoader.swift; sourceTree = "<group>"; };
 		8433840E2710E76D0086DB06 /* RepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListResponse.swift; sourceTree = "<group>"; };
 		843384112710E7CB0086DB06 /* RepoSearchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchListService.swift; sourceTree = "<group>"; };
+		843384132710EF160086DB06 /* RemoteRepoListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepoListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				843384112710E7CB0086DB06 /* RepoSearchListService.swift */,
+				843384132710EF160086DB06 /* RemoteRepoListResponse.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8433840D2710E67D0086DB06 /* RepoSearchLoader.swift in Sources */,
+				843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */,
 				843383DA2710E3040086DB06 /* ViewController.swift in Sources */,
 				8433840A2710E4F50086DB06 /* URLSessionHttpClient.swift in Sources */,
 				843383D62710E3040086DB06 /* AppDelegate.swift in Sources */,
