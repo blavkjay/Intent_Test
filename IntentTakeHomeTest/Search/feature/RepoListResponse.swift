@@ -27,6 +27,8 @@ public struct Owner {
     
     let login: String?
     let id: Int?
+    let url: String?
+    let htmlUrl: String?
     let avatarURL: String?
     let publicRepos : Int?
 

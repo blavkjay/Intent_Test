@@ -34,7 +34,7 @@ final class URLSessionHttpClient: ApiClient {
         urlRequest.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
         
         //MARK:- ADD TOKEN
-        
+        urlRequest.setValue("token ", forHTTPHeaderField: "Authorization")
         urlRequest.httpMethod = "GET"
         session.dataTask(with: urlRequest) { data, response, error in
             if let httpResponse = response as? HTTPURLResponse {

@@ -17,7 +17,7 @@ public class RepoSearchViewModel {
     }
     
     var onload: (() -> Void)?
-    var onSuccess: ((RepoListResponse) -> Void)?
+    var onSuccess: (([Repository]) -> Void)?
     var onError: ((String) -> Void)?
     
     func searchGit(queryString: String) {
@@ -27,7 +27,7 @@ public class RepoSearchViewModel {
             switch result {
             case let .success(model):
                 print(model)
-                self?.onSuccess?(model)
+                self?.onSuccess?(model.items)
             case let .failure(error):
                 self?.onError?(error.message)
             }

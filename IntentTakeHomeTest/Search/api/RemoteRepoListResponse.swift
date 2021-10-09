@@ -55,14 +55,17 @@ struct RemoteOwner: Codable {
     let id: Int?
     let avatarURL: String?
     let publicRepos : Int?
+    let url: String?
+    let htmlUrl: String?
     
     enum CodingKeys: String, CodingKey {
-        case login, id
+        case login, id, url
         case avatarURL = "avatar_url"
         case publicRepos = "public_repos"
+        case htmlUrl = "html_url"
     }
     
     func toModel() -> Owner {
-        return Owner(login: login, id: id, avatarURL: avatarURL, publicRepos: publicRepos)
+        return Owner(login: login, id: id, url: url, htmlUrl: htmlUrl, avatarURL: avatarURL, publicRepos: publicRepos)
     }
 }

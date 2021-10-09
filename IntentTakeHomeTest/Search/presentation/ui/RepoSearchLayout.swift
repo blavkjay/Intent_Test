@@ -11,10 +11,17 @@ import UIKit
 public final class RepoSearchLayout: UIView {
     
     var searchQueryEntered: ((String) -> Void)?
+    var didSelectRepo: ((String) -> Void)?
+    
+    var data : [Repository]?{
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
-    
     
     let searchInput : SearchInput = {
         let v = SearchInput()
@@ -43,6 +50,12 @@ public final class RepoSearchLayout: UIView {
         addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(SearchResultTableViewCell.self, forCellReuseIdentifier: "\(SearchResultTableViewCell.self)")
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
     }
     
     func addLayout() {
@@ -75,5 +88,26 @@ extension RepoSearchLayout: UITextFieldDelegate {
         if text.count >= 5 {
             searchQueryEntered?(text)
         }
+    }
+}
+
+extension RepoSearchLayout: UITableViewDelegate, UITableViewDataSource {
+   
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data?.count ?? 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(SearchResultTableViewCell.self)", for: indexPath) as? SearchResultTableViewCell else {
+            return UITableViewCell()}
+        cell.configureCell(with: data?[indexPath.row])
+        return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let url = data?[indexPath.row].owner?.htmlUrl else { return }
+        didSelectRepo?(url)
+        
     }
 }

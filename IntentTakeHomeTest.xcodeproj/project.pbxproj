@@ -25,6 +25,8 @@
 		8433841E2710F64F0086DB06 /* RepoSearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */; };
 		843384202710F65B0086DB06 /* RepoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */; };
 		84338423271160670086DB06 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84338422271160670086DB06 /* SearchInput.swift */; };
+		843384262711A6E20086DB06 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384252711A6E20086DB06 /* SearchResultTableViewCell.swift */; };
+		84A199112711B9C900C7DC1C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A199102711B9C900C7DC1C /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchLayout.swift; sourceTree = "<group>"; };
 		8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewController.swift; sourceTree = "<group>"; };
 		84338422271160670086DB06 /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
+		843384252711A6E20086DB06 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		84A199102711B9C900C7DC1C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 				843383DE2710E3070086DB06 /* Assets.xcassets */,
 				843383E02710E3070086DB06 /* LaunchScreen.storyboard */,
 				843383E32710E3070086DB06 /* Info.plist */,
+				84A199102711B9C900C7DC1C /* ImageCacheManager.swift */,
 			);
 			path = IntentTakeHomeTest;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 		8433841C2710F6390086DB06 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				843384242711A69D0086DB06 /* custom cell */,
 				8433842127115E4A0086DB06 /* component */,
 				8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */,
 				8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */,
@@ -228,6 +234,14 @@
 				84338422271160670086DB06 /* SearchInput.swift */,
 			);
 			path = component;
+			sourceTree = "<group>";
+		};
+		843384242711A69D0086DB06 /* custom cell */ = {
+			isa = PBXGroup;
+			children = (
+				843384252711A6E20086DB06 /* SearchResultTableViewCell.swift */,
+			);
+			path = "custom cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +377,7 @@
 				843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */,
 				84338423271160670086DB06 /* SearchInput.swift in Sources */,
 				8433841B2710F5FC0086DB06 /* RepoSearchComposer.swift in Sources */,
+				84A199112711B9C900C7DC1C /* ImageCacheManager.swift in Sources */,
 				843383DA2710E3040086DB06 /* ViewController.swift in Sources */,
 				8433840A2710E4F50086DB06 /* URLSessionHttpClient.swift in Sources */,
 				843384202710F65B0086DB06 /* RepoSearchViewController.swift in Sources */,
@@ -370,6 +385,7 @@
 				8433840F2710E76D0086DB06 /* RepoListResponse.swift in Sources */,
 				843383D82710E3040086DB06 /* SceneDelegate.swift in Sources */,
 				843384082710E4D20086DB06 /* ApiClient.swift in Sources */,
+				843384262711A6E20086DB06 /* SearchResultTableViewCell.swift in Sources */,
 				843384182710F4FA0086DB06 /* RepoSearchViewModel.swift in Sources */,
 				843384122710E7CB0086DB06 /* RepoSearchListService.swift in Sources */,
 				8433841E2710F64F0086DB06 /* RepoSearchLayout.swift in Sources */,
