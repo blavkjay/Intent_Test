@@ -27,6 +27,8 @@
 		84338423271160670086DB06 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84338422271160670086DB06 /* SearchInput.swift */; };
 		843384262711A6E20086DB06 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843384252711A6E20086DB06 /* SearchResultTableViewCell.swift */; };
 		84A199112711B9C900C7DC1C /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A199102711B9C900C7DC1C /* ImageCacheManager.swift */; };
+		84A199132711DF1200C7DC1C /* RepoSearchListServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A199122711DF1200C7DC1C /* RepoSearchListServiceTest.swift */; };
+		84A199152712314400C7DC1C /* RepoSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A199142712314400C7DC1C /* RepoSearchViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		84338422271160670086DB06 /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		843384252711A6E20086DB06 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
 		84A199102711B9C900C7DC1C /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		84A199122711DF1200C7DC1C /* RepoSearchListServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchListServiceTest.swift; sourceTree = "<group>"; };
+		84A199142712314400C7DC1C /* RepoSearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			children = (
 				843383EC2710E3080086DB06 /* IntentTakeHomeTestTests.swift */,
 				843383EE2710E3080086DB06 /* Info.plist */,
+				84A199122711DF1200C7DC1C /* RepoSearchListServiceTest.swift */,
+				84A199142712314400C7DC1C /* RepoSearchViewModelTest.swift */,
 			);
 			path = IntentTakeHomeTestTests;
 			sourceTree = "<group>";
@@ -397,6 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				843383ED2710E3080086DB06 /* IntentTakeHomeTestTests.swift in Sources */,
+				84A199132711DF1200C7DC1C /* RepoSearchListServiceTest.swift in Sources */,
+				84A199152712314400C7DC1C /* RepoSearchViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

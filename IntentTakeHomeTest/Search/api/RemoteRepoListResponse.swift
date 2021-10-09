@@ -25,47 +25,35 @@ struct RemoteRepoListResponse : Codable {
 }
 
 struct RemoteRepository: Codable {
-    let id: Int?
+
     let name: String?
     let owner: RemoteOwner?
     let description: String?
-    let forksURL: String?
-    let forks : Int?
-    let watchers: Int?
     
     enum CodingKeys: String, CodingKey {
-        case id
+
         case name
         case owner
         case description
-        case forksURL = "forks_url"
-        case forks
-        case watchers
-    
     }
     
     func toModel() -> Repository {
-        return Repository(id: id, name: name, owner: owner?.toModel() , description: description, forksURL: forksURL, forks: forks, watchers: watchers)
+        return Repository(name: name, owner: owner?.toModel() , description: description)
     }
 }
 
 struct RemoteOwner: Codable {
-    
     let login: String?
-    let id: Int?
     let avatarURL: String?
-    let publicRepos : Int?
-    let url: String?
     let htmlUrl: String?
     
     enum CodingKeys: String, CodingKey {
-        case login, id, url
+        case login
         case avatarURL = "avatar_url"
-        case publicRepos = "public_repos"
         case htmlUrl = "html_url"
     }
     
     func toModel() -> Owner {
-        return Owner(login: login, id: id, url: url, htmlUrl: htmlUrl, avatarURL: avatarURL, publicRepos: publicRepos)
+        return Owner(login: login,htmlUrl: htmlUrl, avatarURL: avatarURL)
     }
 }

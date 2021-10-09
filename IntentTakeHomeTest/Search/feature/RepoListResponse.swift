@@ -13,23 +13,20 @@ public struct RepoListResponse {
     let items: [Repository]
 }
 
-public struct Repository {
-    let id: Int?
+public struct Repository: Equatable {
+   
     let name: String?
     let owner: Owner?
     let description: String?
-    let forksURL: String?
-    let forks : Int?
-    let watchers: Int?
+    public static func == (lhs: Repository, rhs: Repository) -> Bool {
+        return lhs.name == rhs.name && lhs.owner == rhs.owner && lhs.description == rhs.description
+    }
+    
 }
 
-public struct Owner {
+public struct Owner: Equatable {
     
     let login: String?
-    let id: Int?
-    let url: String?
     let htmlUrl: String?
     let avatarURL: String?
-    let publicRepos : Int?
-
 }
