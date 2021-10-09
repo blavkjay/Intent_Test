@@ -41,13 +41,20 @@ final public class RepoSearchViewController: UIViewController {
             self.viewModel?.searchGit(queryString: query)
         }
         
+        viewModel?.onload = { [weak self] in
+            guard let self = self else {return}
+            self.layout.isLoading = true
+        }
+        
         viewModel?.onSuccess = { [weak self] data in
             guard let self = self else { return }
+            self.layout.isLoading = false
             self.layout.data = data
         }
         
         viewModel?.onError = { [weak self] errorMessage in
             guard let self = self else { return }
+            self.layout.isLoading = false
             DispatchQueue.main.async {
                 self.showErrorAlert(message: errorMessage)
             }

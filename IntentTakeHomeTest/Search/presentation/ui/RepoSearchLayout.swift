@@ -21,6 +21,18 @@ public final class RepoSearchLayout: UIView {
         }
     }
     
+    var isLoading: Bool = false {
+        didSet {
+            DispatchQueue.main.async {
+                if self.isLoading {
+                    self.activityIndicator.startAnimating()
+                } else {
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
+    }
+    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     let searchInput : SearchInput = {
@@ -49,6 +61,7 @@ public final class RepoSearchLayout: UIView {
         addSubview(searchInput)
         addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.center = self.center
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self

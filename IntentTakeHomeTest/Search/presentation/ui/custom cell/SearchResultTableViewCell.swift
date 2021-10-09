@@ -131,3 +131,29 @@ final class SearchResultTableViewCell: UITableViewCell {
     }
     
 }
+
+public extension UITableView {
+    
+    func setEmptyMessage(_ message: String) {
+        
+        let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
+        let messageLabel = UILabel()
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        messageLabel.text = message
+        messageLabel.textColor = .darkGray
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        //messageLabel.font = Font().getBoldFont(ofSize: 24)
+        messageLabel.sizeToFit()
+        emptyView.addSubview(messageLabel)
+        messageLabel.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor).isActive = true
+        messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor).isActive = true
+        
+        self.backgroundView = emptyView
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+        
+    }
+}
