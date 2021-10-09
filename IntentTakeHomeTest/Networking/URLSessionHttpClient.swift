@@ -31,7 +31,15 @@ final class URLSessionHttpClient: ApiClient {
         
         var urlRequest = URLRequest(url: url)
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
+        
+        //MARK:- ADD TOKEN
+        
+        urlRequest.httpMethod = "GET"
         session.dataTask(with: urlRequest) { data, response, error in
+            if let httpResponse = response as? HTTPURLResponse {
+                print("error \(httpResponse.statusCode)")
+            }
             if let error = error {
                 completion(.failure(error))
             }

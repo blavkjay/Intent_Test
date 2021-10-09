@@ -17,7 +17,7 @@ public final class RepoSearchListService: RepoSearchLoader {
     }
     
     public func getRepositoriesFromSearch(queryString: String, page: Int, perPageNumber: Int, completion: @escaping (RepoSearchLoader.Result) -> Void) {
-        let url = "https://api.github.com/search"
+        let url = "https://api.github.com/search/repositories"
         let params: [String:Any] = ["q": queryString,
                                     "page": page,
                                     "per_page": perPageNumber]

@@ -26,6 +26,7 @@ public class RepoSearchViewModel {
         repoSearchLoader.getRepositoriesFromSearch(queryString: queryString, page: 1, perPageNumber: 20) { [weak self] result in
             switch result {
             case let .success(model):
+                print(model)
                 self?.onSuccess?(model)
             case let .failure(error):
                 self?.onError?(error.message)

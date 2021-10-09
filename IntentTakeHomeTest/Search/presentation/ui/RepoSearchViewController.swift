@@ -21,6 +21,26 @@ final public class RepoSearchViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addSubview(layout)
+        layout.translatesAutoresizingMaskIntoConstraints = false
+        setupView()
+        title = "Search GitHub"
+        bindView()
+    }
+    
+    private func bindView() {
+        layout.searchQueryEntered = { query in
+            print(query)
+        }
+    }
+    
+    private func setupView() {
+        NSLayoutConstraint.activate([
+         
+            layout.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            layout.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            layout.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            layout.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }

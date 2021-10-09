@@ -24,6 +24,7 @@
 		8433841B2710F5FC0086DB06 /* RepoSearchComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841A2710F5FC0086DB06 /* RepoSearchComposer.swift */; };
 		8433841E2710F64F0086DB06 /* RepoSearchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */; };
 		843384202710F65B0086DB06 /* RepoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */; };
+		84338423271160670086DB06 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84338422271160670086DB06 /* SearchInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8433841A2710F5FC0086DB06 /* RepoSearchComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchComposer.swift; sourceTree = "<group>"; };
 		8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchLayout.swift; sourceTree = "<group>"; };
 		8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchViewController.swift; sourceTree = "<group>"; };
+		84338422271160670086DB06 /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,10 +215,19 @@
 		8433841C2710F6390086DB06 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				8433842127115E4A0086DB06 /* component */,
 				8433841D2710F64F0086DB06 /* RepoSearchLayout.swift */,
 				8433841F2710F65B0086DB06 /* RepoSearchViewController.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		8433842127115E4A0086DB06 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				84338422271160670086DB06 /* SearchInput.swift */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +361,7 @@
 			files = (
 				8433840D2710E67D0086DB06 /* RepoSearchLoader.swift in Sources */,
 				843384142710EF160086DB06 /* RemoteRepoListResponse.swift in Sources */,
+				84338423271160670086DB06 /* SearchInput.swift in Sources */,
 				8433841B2710F5FC0086DB06 /* RepoSearchComposer.swift in Sources */,
 				843383DA2710E3040086DB06 /* ViewController.swift in Sources */,
 				8433840A2710E4F50086DB06 /* URLSessionHttpClient.swift in Sources */,
@@ -529,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36X855UTYZ;
 				INFOPLIST_FILE = IntentTakeHomeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36X855UTYZ;
 				INFOPLIST_FILE = IntentTakeHomeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
